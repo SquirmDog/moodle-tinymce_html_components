@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy provider implementation for tinymce_html_components.
+ * Privacy provider implementation for tiny_html_components.
  *
  * @package    tiny_html_components
  * @copyright  2022 Catalyst IT Australia Pty Ltd

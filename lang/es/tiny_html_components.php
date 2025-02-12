@@ -24,7 +24,7 @@
 
 $string['plugin'] = 'tiny_html_components';
 $string['pluginname'] = 'Componentes HTML para Tiny';
-$string['pluginname_help'] = 'Extensión para ayudar usted a agregar componentes (bootstrap por ejemplo) en el editor TinyMCE.';
+$string['pluginname_help'] = 'Extensión para ayudar usted a agregar componentes (bootstrap por ejemplo) en el editor Tiny.';
 $string['html_components:desc'] = 'Agregar componentes html';
 $string['html_components:title'] = 'Agregar componentes html';
 

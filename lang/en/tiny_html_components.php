@@ -16,7 +16,7 @@
 
 /**
  *
- * @package    tinymce_html_components
+ * @package    tiny_html_components
  * @author  2020 Anthony Durif
  * @copyright 2020 Anthony Durif, Université Clermont Auvergne
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -27,7 +27,7 @@
 
 $string['plugin'] = 'tiny_html_components';
 $string['pluginname'] = 'Tiny HTML Components';
-$string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) throw TinyMCE editor.';
+$string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) throw Tiny editor.';
 
 $string['html_components:desc'] = 'Insert some html components';
 $string['html_components:title'] = 'Insert html components';
@@ -97,4 +97,4 @@ $string['button_tooltip_bottom'] = 'Bottom';
 $string['button_tooltip_left'] = 'Left';
 $string['preview_legend'] = 'Preview';
 $string['preview_desc'] = 'Component preview let you visualize components which will be displayed in the page. This display can be a little different than the final render according to the theme, options, etc...';
-$string['privacy:metadata'] = 'The TinyMCE HTML Components plugin does not store any personal data.';
+$string['privacy:metadata'] = 'The Tiny HTML Components plugin does not store any personal data.';

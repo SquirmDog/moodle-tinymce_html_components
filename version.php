@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin for Moodle tinymce html_components.
+ * Plugin for Moodle tiny html_components.
  *
- * @package    tinymce_html_components
+ * @package    tiny_html_components
  * @author  2020 Anthony Durif
  * @copyright 2020 Anthony Durif, Université Clermont Auvergne
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,6 +25,6 @@
 defined('MOODLE_INTERNAL') || die();
 $plugin->version = 2025021200; // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires = 2022112800;
-$plugin->component = 'tinymce_html_components';
+$plugin->component = 'tiny_html_components';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = 'v4.0';
