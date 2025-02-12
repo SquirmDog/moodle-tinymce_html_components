@@ -16,7 +16,7 @@
 
 
 
-namespace tinymce_html_components;
+namespace tiny_html_components;
 
 use context;
 use editor_tiny\plugin;
@@ -34,7 +34,7 @@ use editor_tiny\plugin_with_menuitems;
  * @return mixed The value of the key if it exists, or the default value.
  */
 
-function tinymce_html_components_cfgwithdefault(object $cfg, string $key, $default) {
+function tiny_html_components_cfgwithdefault(object $cfg, string $key, $default) {
     return property_exists($cfg, $key) ? $cfg->$key : $default;
 }
 
