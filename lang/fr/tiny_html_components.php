@@ -23,7 +23,7 @@
  */
 
  $string['plugin'] = 'tiny_html_components';
-$string['pluginname'] = 'Plugin Tiny d\'insertion de composants html';
+$string['pluginname'] = 'Tiny d\'insertion de composants HTML';
 $string['pluginname_help'] = 'Plugin permettant d\insérer des éléments html (bootstrap par exemple) via TinyMCE.';
 $string['html_components:desc'] = 'Insertion de composants html';
 $string['html_components:title'] = 'Insérer des composants html';

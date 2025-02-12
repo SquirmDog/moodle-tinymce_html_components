@@ -26,7 +26,7 @@
 
 
 $string['plugin'] = 'tiny_html_components';
-$string['pluginname'] = 'Tiny Html Components Plugin';
+$string['pluginname'] = 'Tiny HTML Components';
 $string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) throw TinyMCE editor.';
 
 $string['html_components:desc'] = 'Insert some html components';
