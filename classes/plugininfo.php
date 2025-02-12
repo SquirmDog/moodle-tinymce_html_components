@@ -14,13 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Tiny CodePro plugin version details.
- *
- * @package     tiny_codepro
- * @copyright   2023-2025 Josep Mulet Pol <pep.mulet@gmail.com>
- * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+
 
 namespace tinymce_html_components;
 
@@ -39,6 +33,7 @@ use editor_tiny\plugin_with_menuitems;
  *
  * @return mixed The value of the key if it exists, or the default value.
  */
+
 function tinymce_html_components_cfgwithdefault(object $cfg, string $key, $default) {
     return property_exists($cfg, $key) ? $cfg->$key : $default;
 }
