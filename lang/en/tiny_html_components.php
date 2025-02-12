@@ -22,8 +22,13 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'TinyMCE Html Components Plugin';
+
+
+
+$string['plugin'] = 'tiny_html_components';
+$string['pluginname'] = 'Tiny HTML Components';
 $string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) throw TinyMCE editor.';
+
 $string['html_components:desc'] = 'Insert some html components';
 $string['html_components:title'] = 'Insert html components';
 

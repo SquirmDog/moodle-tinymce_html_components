@@ -15,16 +15,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin for Moodle tinymce html_components.
+ * Tiny CodePro plugin version details.
  *
- * @package    tinymce_html_components
- * @author  2020 Anthony Durif
- * @copyright 2020 Anthony Durif, Université Clermont Auvergne
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     tiny_codepro
+ * @copyright   2023 Josep Mulet Pol <pep.mulet@gmail.com>
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || die();
-$plugin->version = 2025021200; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2022112800;
-$plugin->component = 'tinymce_html_components';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v4.0';
+
+$capabilities = [
+    'tiny/codepro:viewplugin' => [
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_COURSE,
+        'archetypes' => [
+            'student' => CAP_ALLOW,
+            'coursecreator' => CAP_ALLOW,
+            'teacher' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW,
+        ],
+    ],
+];
