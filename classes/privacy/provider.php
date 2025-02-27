@@ -14,37 +14,29 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Privacy provider implementation for tiny_html_components.
- *
- * @package    tiny_html_components
- * @copyright  2022 Catalyst IT Australia Pty Ltd
- * @author     Cameron Ball <cameronball@catalyst-au.net>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-declare(strict_types=1);
-
 namespace tiny_html_components\privacy;
 
+use core_privacy\local\metadata\collection;
 /**
- * Privacy provider implementation for tiny_html_components.
+ * Privacy Subsystem implementation for the html_components plugin for TinyMCE.
  *
- * @copyright  2022 Catalyst IT Australia Pty Ltd
- * @author     Cameron Ball <cameronball@catalyst-au.net>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package tiny_html_components
+ * @copyright 2023 Gerbault Cédric, Anthony Durif, Université Clermont Auvergne
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class provider implements \core_privacy\local\metadata\null_provider
-{
+class provider implements \core_privacy\local\metadata\provider {
+    public static function get_metadata(collection $collection): collection {
 
-    /**
-     * Get the language string identifier with the component's language
-     * file to explain why this plugin stores no data.
-     *
-     * @return  string
-     */
-    public static function get_reason(): string
-    {
-        return 'privacy:metadata';
+        // Here you will add more items into the collection.
+        $collection -> add_database_table(
+            'tiny_html_components_custom',
+            [
+                'userid'=>'privacy:metadata:tiny_html_components_custom:userid',
+                'content'=>'privacy:metadata:tiny_html_components_custom:content'
+            ],
+            'privacy:metadata:tiny_html_components_custom'
+        );
+
+        return $collection;
     }
 }

@@ -14,70 +14,90 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
-
 namespace tiny_html_components;
 
 use context;
 use editor_tiny\plugin;
 use editor_tiny\plugin_with_buttons;
-use editor_tiny\plugin_with_configuration;
 use editor_tiny\plugin_with_menuitems;
+use editor_tiny\plugin_with_configuration;
+
+
+
 
 /**
- * Gets the value of a configuration key with a default fallback.
+ * Tiny html_component plugin for Moodle.
  *
- * @param object $cfg       The configuration object.
- * @param string $key       The key to check in the configuration object.
- * @param mixed  $default   The default value to return if the key is not found.
- *
- * @return mixed The value of the key if it exists, or the default value.
+ * @package    tiny_html_components
+ * @copyright  2023 Gerbault Cédric, Anthony Durif, Université Clermont Auvergne 
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-function tiny_html_components_cfgwithdefault(object $cfg, string $key, $default) {
-    return property_exists($cfg, $key) ? $cfg->$key : $default;
-}
-
-/**
- * Summary of plugininfo
- */
 class plugininfo extends plugin implements
     plugin_with_buttons,
     plugin_with_menuitems,
     plugin_with_configuration {
-
-    /**
-     * Get the editor buttons for this plugins
-     *
-     * @return array
-     */
-    // public static function get_available_buttons(): array {
-    //     return [
-    //         'tiny_codepro/codepro',
-    //     ];
-    // }
-    /**
-     * Get the dropdown menu items for this plugin
-     *
-     * @return array
-     */
-    // public static function get_available_menuitems(): array {
-    //     return [
-    //         'tiny_codepro/codepro',
-    //     ];
-    // }
-
-    /**
-     * Get the configuration for the plugin, capabilities and
-     * config (from settings.php)
-     *
-     * @param context $context
-     * @param array $options
-     * @param array $fpoptions
-     * @param \editor_tiny\editor|null $editor
-     * @return void
-     *
-     * @return array
-     */
     
+
+
+    public static function get_available_buttons(): array {
+        return [
+            'tiny_html_components/html_componentstiny_html_components',
+        ];
+    }
+
+    public static function get_available_menuitems(): array {
+        return [
+            'tiny_html_components/html_componentstiny_html_components',
+        ];
+    }
+
+    public static function get_plugin_configuration_for_context(
+        context $context,
+        array $options,
+        array $fpoptions,
+        ?\editor_tiny\editor $editor = null
+    ): array {
+
+        $customContent = self :: getAvailableComponents() ;
+
+        return [
+            'customcomponents' => $customContent,
+        ];
+    }
+
+    /**
+     * Function to return all the available components as <option>.
+     * We check here if the current user has own custom components to list or to use.
+     * @return string
+     * @throws coding_exception
+     */
+    public static function getAvailableComponents()
+    {
+        global $DB;
+        global $USER;
+
+
+        $customs = $DB->get_records('tiny_html_components_custom', array('userid' => $USER->id), 'name ASC');
+        
+        if ($customs) {
+            
+            $customComponents = [];
+            foreach ($customs as $custom) {
+                
+                array_push($customComponents,[
+                    'value' => 'custom',
+                    'custom-component' => $custom->code,
+                    'custom-component-content' => htmlspecialchars($custom->content),
+                    'name' => $custom -> name,
+                ]);
+            }
+            return json_encode($customComponents);
+        }
+        else{
+            return null;
+        }
+
+        
+    }
 }

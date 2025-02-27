@@ -16,22 +16,21 @@
 
 /**
  *
- * @package    tiny_html_components
+ * @package    tinymce_html_components
  * @author  2020 Anthony Durif
  * @copyright 2020 Anthony Durif, Université Clermont Auvergne
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-
-
-
-$string['plugin'] = 'tiny_html_components';
-$string['pluginname'] = 'Tiny HTML Components';
-$string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) throw Tiny editor.';
-
-$string['html_components:desc'] = 'Insert some html components';
-$string['html_components:title'] = 'Insert html components';
-
+$string['pluginname'] = 'TinyMCE html Components Plugin';
+$string['pluginname_help'] = 'Plugin to insert some html components (bootstrap for example) through TinyMCE editor.';
+$string['addhtml_components'] = 'Insert some html components';
+$string['title'] = 'Insert HTML components';
+$string['insert'] = 'Insert HTML';
+$string['suggestion'] = '';
+$string['button_dropdown'] = 'Make button a dropdown';
+$string['button_dropdown_nb'] = 'Num of dropdown options :';
+$string['card_disposition_info'] = 'Max allowed side by side: XL (1), L (2), M (3), S (4)';
 $string['choice_legend'] = 'Component choice';
 $string['component'] = 'Component :';
 $string['component_placeholder'] = 'Choose the component...';
@@ -58,7 +57,7 @@ $string['alert_danger'] = 'Error/danger (red)';
 $string['alert_primary'] = 'Principal information (blue)';
 $string['alert_secondary'] = 'Secondary information (gray)';
 $string['alert_dark'] = 'Dark (black)';
-$string['alert_close'] = 'Possibility to close the alert :';
+$string['alert_close'] = 'Allow closing alert :';
 $string['card'] = 'Card';
 $string['card_nb'] = 'Number of cards :';
 $string['card_display'] = 'Card display :';
@@ -70,14 +69,14 @@ $string['card_classic'] = 'Classic (white)';
 $string['card_orientation'] = 'Card orientation : ';
 $string['card_orientation_portrait'] = 'Portrait';
 $string['card_orientation_landscape'] = 'Landscape';
-$string['card_disposition'] = 'Card disposition : ';
+$string['card_disposition'] = 'Card size : ';
 $string['card_disposition_line'] = ' by line';
 $string['jumbotron'] = 'Jumbrotron';
 $string['accordion'] = 'Accordion';
-$string['accordion_nb'] = 'Nb lines :';
-$string['accordion_show'] = 'Let items collapsed';
+$string['accordion_nb'] = 'Num lines :';
+$string['accordion_show'] = 'Start items collapsed';
 $string['nav'] = 'Navigation menu';
-$string['nav_nb'] = 'Nb links :';
+$string['nav_nb'] = 'Num links :';
 $string['button'] = 'Button';
 $string['button_nb'] = 'Number of buttons :';
 $string['button_type'] = 'Button type :';
