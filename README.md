@@ -10,7 +10,7 @@ These components (mostly from Bootstrap) are added within the Tiny editor and cu
 Requirements
 ------------
 - Moodle 4.1 or later.
--> Tested on Moodle 4.1.
+-> Tested on Moodle 4.5.
 - Usage of Tiny editor
 - Usage Boost theme or a theme which extends Boost theme (use bootstrap).
 
